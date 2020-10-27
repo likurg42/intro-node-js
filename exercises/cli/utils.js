@@ -9,8 +9,11 @@ const contactsLocation = 'contacts.json'
  * @contactsLocation path and convert
  * it to a js object
  */
-const getContacts = () => {
-  
+const getContacts = (cb) => {
+    fs.readFile(path.resolve(__dirname, './contacts.json'), { encoding: "utf-8" }, (err, data) => {
+        if (err) console.error(err);
+        cb(JSON.parse(data));
+    })
 }
 
 /**
@@ -19,12 +22,12 @@ const getContacts = () => {
  * @param {Object} contacts contacts object
  */
 const saveContacts = (contacts) => {
-
+    fs.writeFile(path.resolve(__dirname, './contacts.json'), JSON.stringify(contacts), (err) => { if (err) console.error(err) });
 }
 
 module.exports = {
-  contactsLocation,
-  getContacts,
-  saveContacts
+    contactsLocation,
+    getContacts,
+    saveContacts
 }
 

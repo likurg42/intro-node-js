@@ -1,19 +1,21 @@
 {
-  "name": "intro-to-nodejs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Scott Moss <willscottmoss@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "jest": "^23.6.0"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "mime": "^2.3.1",
-    "morgan": "^1.9.1"
-  }
+    "name": "intro-to-nodejs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Scott Moss <willscottmoss@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^26.6.1"
+    },
+    "scripts": {
+        "test": "jest ./exercises/modules/node/test.js "
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "commander": "^6.1.0",
+        "express": "^4.16.3",
+        "inquirer": "^7.3.3",
+        "mime": "^2.3.1",
+        "morgan": "^1.9.1"
+    }
 }
